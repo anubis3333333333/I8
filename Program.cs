@@ -95,3 +95,24 @@
 //     }
 //     return count;
 // }
+
+
+
+double c1 = 0;
+double f1 = ToFahrenheit(c1);
+Console.WriteLine($"{c1} °C = {f1} °F");
+
+double c2 = 100;
+double f2 = ToFahrenheit(c2);
+Console.WriteLine($"{c2} °C = {f2} °F"); 
+
+double c3 = 37;
+double f3 = ToFahrenheit(c3);
+Console.WriteLine($"{c3} °C = {f3} °F"); 
+
+static double Average(int[] arr) { double sum = 0; foreach (int x in arr) sum += x; return sum / arr.Length; }
+static int CountGreater(int[] arr, int limit) { int count = 0; foreach (int x in arr) if (x > limit) count++; return count; }
+
+static double ToFahrenheit(double celsius){
+    return celsius * 9 / 5 + 32;
+}
