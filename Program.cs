@@ -67,3 +67,31 @@
 
 
 
+
+
+
+// int[] testArray = { 120, 45, 300, 80, 15, 210 };
+// double avg = Average(testArray);
+// int count = CountGreater(testArray, 100); 
+// Console.WriteLine($"Среднее значение массива: {avg:F2}"); 
+// Console.WriteLine($"Количество элементов больше 100: {count}");
+
+// static double Average(int[] arr){
+//     if (arr.Length == 0) return 0;
+//     double sum = 0;
+//     foreach (int x in arr){
+//         sum += x;
+//     }
+//     return sum / arr.Length;
+// }
+
+
+// static int CountGreater(int[] arr, int limit){
+//     int count = 0;
+//     foreach (int x in arr){
+//         if (x > limit){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
