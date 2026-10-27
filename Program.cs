@@ -98,21 +98,78 @@
 
 
 
-double c1 = 0;
-double f1 = ToFahrenheit(c1);
-Console.WriteLine($"{c1} °C = {f1} °F");
+// double c1 = 0;
+// double f1 = ToFahrenheit(c1);
+// Console.WriteLine($"{c1} °C = {f1} °F");
 
-double c2 = 100;
-double f2 = ToFahrenheit(c2);
-Console.WriteLine($"{c2} °C = {f2} °F"); 
+// double c2 = 100;
+// double f2 = ToFahrenheit(c2);
+// Console.WriteLine($"{c2} °C = {f2} °F"); 
 
-double c3 = 37;
-double f3 = ToFahrenheit(c3);
-Console.WriteLine($"{c3} °C = {f3} °F"); 
+// double c3 = 37;
+// double f3 = ToFahrenheit(c3);
+// Console.WriteLine($"{c3} °C = {f3} °F"); 
 
-static double Average(int[] arr) { double sum = 0; foreach (int x in arr) sum += x; return sum / arr.Length; }
-static int CountGreater(int[] arr, int limit) { int count = 0; foreach (int x in arr) if (x > limit) count++; return count; }
+// static double Average(int[] arr) { double sum = 0; foreach (int x in arr) sum += x; return sum / arr.Length; }
+// static int CountGreater(int[] arr, int limit) { int count = 0; foreach (int x in arr) if (x > limit) count++; return count; }
 
-static double ToFahrenheit(double celsius){
-    return celsius * 9 / 5 + 32;
-}
+// static double ToFahrenheit(double celsius){
+//     return celsius * 9 / 5 + 32;
+// }
+
+
+
+// Console.WriteLine($"Факториал 5! = {Factorial(5)}"); 
+// Console.WriteLine("Простые числа от 2 до 50:");
+// for (int i = 2; i <= 50; i++){
+//     if (IsPrime(i)){
+//         Console.Write($"{i} ");
+//     }
+// }
+// Console.WriteLine("\n"); 
+// Console.WriteLine("Тестирование ввода с проверкой");
+// int num1 = ReadPositive("Введите первое положительное число: ");
+// int num2 = ReadPositive("Введите второе положительное число: ");
+// int sum = num1 + num2;
+// Console.WriteLine($"Сумма введенных чисел: {sum}");
+
+
+
+
+
+
+// static long Factorial(int n){
+//     long result = 1;
+//     for (int i = 1; i <= n; i++){
+//         result *= i;
+//     }
+//     return result;
+// }
+
+
+// static bool IsPrime(int n){
+//     if (n < 2) return false;
+//     for (int i = 2; i * i <= n; i++){
+//         if (n % i == 0) return false;
+//     }
+//     return true;
+// }
+
+
+// static int ReadPositive(string message){
+//     int number;
+//     do{
+//         Console.Write(message);
+//         string input = Console.ReadLine();
+        
+//         if (int.TryParse(input, out number)){
+//             if (number > 0){
+//                 return number; 
+//             }
+//         }
+        
+//         Console.WriteLine("Ошибка! Нужно ввести целое положительное число (больше 0).");
+//     } while (true); 
+// }
+
+
