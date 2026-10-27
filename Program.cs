@@ -173,3 +173,71 @@
 // }
 
 
+int choice = -1;
+
+while (choice != 0){
+    Console.WriteLine("\n1 – сумма двух чисел");
+    Console.WriteLine("2 – большее из двух чисел");
+    Console.WriteLine("3 – факториал");
+    Console.WriteLine("0 – выход");
+    Console.Write("Выберите пункт: ");
+    
+    if (!int.TryParse(Console.ReadLine(), out choice)){
+        Console.WriteLine("Нет такого пункта");
+        choice = -1; 
+        continue;
+    }
+
+    switch (choice){
+        case 1:
+            int a1 = ReadPositive("Введите первое число: ");
+            int b1 = ReadPositive("Введите второе число: ");
+            Console.WriteLine($"Сумма: {Sum(a1, b1)}");
+            break;
+        case 2:
+            int a2 = ReadPositive("Введите первое число: ");
+            int b2 = ReadPositive("Введите второе число: ");
+            Console.WriteLine($"Большее число: {Max(a2, b2)}");
+            break;
+        case 3:
+            int n = ReadPositive("Введите число для факториала: ");
+            Console.WriteLine($"Факториал: {Factorial(n)}");
+            break;
+        case 0:
+            Console.WriteLine("Выход из программы.");
+            break;
+        default:
+            Console.WriteLine("Нет такого пункта");
+            break;
+    }
+}
+
+
+
+static int Sum(int a, int b) {
+    return a + b;
+}
+
+static int Max(int a, int b) {
+    return a > b ? a : b;
+}
+
+static long Factorial(int n) {
+    long result = 1;
+    for (int i = 1; i <= n; i++) result *= i;
+    return result;
+}
+
+static int ReadPositive(string message) {
+    int value = 0;
+    bool isValid = false;
+
+    while (!isValid){
+        Console.Write(message);
+        if (int.TryParse(Console.ReadLine(), out value) && value > 0){
+            isValid = true;
+        }
+    }
+    
+    return value;
+}
